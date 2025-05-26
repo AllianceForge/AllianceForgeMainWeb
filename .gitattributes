@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.apk filter=lfs diff=lfs merge=lfs -text
+=======
+>>>>>>> c8222c1d04fc89527f055b9312c0a349ba069a83
 ProgressUpdate/AllianceForge-arm64.apk filter=lfs diff=lfs merge=lfs -text
