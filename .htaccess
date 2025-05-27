@@ -1,2 +1,48 @@
+
+# Activar el módulo de reescritura
 RewriteEngine On
-RewriteRule ^ index.html [L]
+
+# -------------------------------------------------------------
+# 1. REGLAS DE MODO DE MANTENIMIENTO (PRIORIDAD ALTA)
+# Estas reglas se aplican antes que las reglas de React Router.
+# -------------------------------------------------------------
+
+# A. REGLA CLAVE PARA EVITAR EL BUCLE DE REDIRECCIÓN EN maintenance.html
+# Si la URL solicitada es EXACTAMENTE /maintenance.html (con o sin barra final, insensible a mayúsculas/minúsculas),
+# detén inmediatamente el procesamiento de CUALQUIER otra regla de reescritura y sirve la página directamente.
+RewriteCond %{REQUEST_URI} ^/maintenance\.html/?$ [NC]
+RewriteRule ^ - [L]
+
+# B. EXCLUIR DIRECCIONES IP ESPECÍFICAS DEL MODO DE MANTENIMIENTO
+# Si la IP del visitante NO es la tuya (¡REEMPLAZA 'TU_DIRECCION_IP_1', 'TU_DIRECCION_IP_2' con tus IPs reales!)
+# Puedes añadir más líneas RewriteCond %{REMOTE_ADDR} !^OTRA_IP_AQUI$ si necesitas más IPs.
+RewriteCond %{REMOTE_ADDR} !^TU_DIRECCION_IP_1$
+RewriteCond %{REMOTE_ADDR} !^TU_DIRECCION_IP_2$
+
+
+# C. EXCLUIR ARCHIVOS ESTÁTICOS NECESARIOS POR maintenance.html DEL REDIRECCIONAMIENTO
+# Si el archivo solicitado NO es un CSS, JS, imagen, o archivo de fuente (woff, ttf, etc.)
+# Esto permite que tu logo, estilos y scripts de maintenance.html se carguen.
+RewriteCond %{REQUEST_URI} !\.(css|js|gif|png|jpg|jpeg|svg|webp|woff|woff2|ttf|eot)$ [NC]
+
+
+# D. REDIRIGIR TODO EL TRÁFICO NO EXCLUIDO A /maintenance.html
+# Si no es una IP autorizada y no es un recurso estático de maintenance.html, redirige.
+# [R=302,L] para una redirección temporal y para que sea la última regla aplicada en este bloque.
+RewriteRule ^(.*)$ /maintenance.html [R=302,L]
+
+
+# -------------------------------------------------------------
+# 2. REGLAS DE REACT ROUTER (SOLO APLICAR SI NO ESTAMOS EN MODO DE MANTENIMIENTO)
+# Estas reglas se ejecutarán SÓLO si las reglas de mantenimiento anteriores no han redirigido la solicitud.
+# -------------------------------------------------------------
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# -------------------------------------------------------------
+# Opcional: Para evitar que los motores de búsqueda indexen la página de mantenimiento
+# -------------------------------------------------------------
+Header set X-Robots-Tag "noindex, nofollow"
