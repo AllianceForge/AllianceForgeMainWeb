@@ -1,29 +1,30 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 
 const WalletConnectButton = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [account, setAccount] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const connectorRef = useRef(null);
+  const [loading, setLoading] = useState(false); // Add loading state
 
   useEffect(() => {
-    if (!connectorRef.current) {
-      connectorRef.current = new WalletConnect({
-        bridge: "https://bridge.walletconnect.org",
-        qrcodeModal: QRCodeModal,
-        chainId: 25,
-        rpc: { 25: "https://evm.cronos.org" },
-      });
-    }
-    const connector = connectorRef.current;
+    // Initialize WalletConnect only once
+    const connector = new WalletConnect({
+      bridge: "https://bridge.walletconnect.org",
+      qrcodeModal: QRCodeModal,
+      chainId: 25,
+      rpc: {
+        25: "https://evm.cronos.org",
+      },
+    });
 
+    // Handle existing session
     if (connector.connected) {
       setIsConnected(true);
       setAccount(connector.accounts[0]);
     }
 
+    // Event handlers
     const handleConnect = (error, payload) => {
       if (error) {
         console.error("Connection error:", error);
@@ -47,6 +48,7 @@ const WalletConnectButton = () => {
     connector.on("connect", handleConnect);
     connector.on("disconnect", handleDisconnect);
 
+    // Cleanup
     return () => {
       connector.off("connect", handleConnect);
       connector.off("disconnect", handleDisconnect);
@@ -54,19 +56,19 @@ const WalletConnectButton = () => {
         connector.killSession();
       }
     };
-  }, []);
+  }, []); // Empty deps array ensures one-time setup
 
   const connectWallet = async () => {
-    const connector = connectorRef.current;
-    if (!isConnected && !loading && connector) {
+    if (!isConnected && !loading) {
       setLoading(true);
       try {
-        if (!connector.connected) {
-          await Promise.race([
-            connector.createSession(),
-            new Promise((_, reject) => setTimeout(() => reject(new Error("Connection timed out")), 10000))
-          ]);
-        }
+        const connector = new WalletConnect({
+          bridge: "https://bridge.walletconnect.org",
+          qrcodeModal: QRCodeModal,
+          chainId: 25,
+          rpc: { 25: "https://evm.cronos.org" },
+        });
+        await connector.createSession();
       } catch (error) {
         console.error("Wallet connection error:", error);
         setLoading(false);
@@ -88,6 +90,7 @@ const WalletConnectButton = () => {
             : "Connect Wallet"}
         </button>
       )}
+      {/* Optional: Show QR modal during connection (handled by QRCodeModal library) */}
     </div>
   );
 };

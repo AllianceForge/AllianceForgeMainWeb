@@ -43,13 +43,13 @@ const App = () => {
         />
 
         {appReady && (
-  		  <>
-    		<Navbar />
-    	    <div className="fixed top-4 left-4 z-20">
-      		  <Suspense fallback={<p className="text-white text-center mt-4">Loading Wallet...</p>}>
-        		  <WalletConnectButton />
-      	    </Suspense>
-   	    	</div>
+          <>
+            <Navbar />
+            <div className="fixed top-4 left-4 z-20">
+              <Suspense fallback={<p className="text-white text-center mt-4">Loading Wallet...</p>}>
+                <WalletConnectButton />
+              </Suspense>
+            </div>
 
             <main className="relative z-10 min-h-screen flex flex-col justify-center items-center text-white">
               <Suspense fallback={

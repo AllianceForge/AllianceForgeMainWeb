@@ -5,25 +5,30 @@ import QRCodeModal from "@walletconnect/qrcode-modal";
 const WalletConnectButton = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [account, setAccount] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const connectorRef = useRef(null);
+  const [loading, setLoading] = useState(false); // Add loading state
+  const connectorRef = useRef(null); // Use ref to persist connector instance
 
   useEffect(() => {
+    // Initialize WalletConnect only once and store in ref
     if (!connectorRef.current) {
       connectorRef.current = new WalletConnect({
         bridge: "https://bridge.walletconnect.org",
         qrcodeModal: QRCodeModal,
         chainId: 25,
-        rpc: { 25: "https://evm.cronos.org" },
+        rpc: {
+          25: "https://evm.cronos.org",
+        },
       });
     }
     const connector = connectorRef.current;
 
+    // Handle existing session
     if (connector.connected) {
       setIsConnected(true);
       setAccount(connector.accounts[0]);
     }
 
+    // Event handlers
     const handleConnect = (error, payload) => {
       if (error) {
         console.error("Connection error:", error);
@@ -47,6 +52,7 @@ const WalletConnectButton = () => {
     connector.on("connect", handleConnect);
     connector.on("disconnect", handleDisconnect);
 
+    // Cleanup
     return () => {
       connector.off("connect", handleConnect);
       connector.off("disconnect", handleDisconnect);
@@ -54,7 +60,7 @@ const WalletConnectButton = () => {
         connector.killSession();
       }
     };
-  }, []);
+  }, []); // Empty deps array ensures one-time setup
 
   const connectWallet = async () => {
     const connector = connectorRef.current;
@@ -62,6 +68,7 @@ const WalletConnectButton = () => {
       setLoading(true);
       try {
         if (!connector.connected) {
+          // Add 10-second timeout to createSession
           await Promise.race([
             connector.createSession(),
             new Promise((_, reject) => setTimeout(() => reject(new Error("Connection timed out")), 10000))

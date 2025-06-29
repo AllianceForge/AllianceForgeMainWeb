@@ -1,12 +1,21 @@
+import { motion } from "framer-motion";
 import videoSource from "../assets/AFVideo2.mp4";
 import logo from "../assets/logo.png";
 
 const HeroSection = () => {
   return (
     <div className="relative py-16 bg-gray-900 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg">
-      <div className="container mx-auto px-6 flex flex-col md:grid md:grid-cols-2 items-center gap-12">
+      <motion.div
+        className="container mx-auto px-6 flex flex-col md:grid md:grid-cols-2 items-center gap-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         {/* Hero Video */}
-        <div className="order-1 md:order-2 w-full flex justify-center">
+        <motion.div 
+          className="order-1 md:order-2 w-full flex justify-center"
+          whileHover={{ scale: 1.05 }}
+        >
           <div className="rounded-2xl shadow-lg overflow-hidden w-full max-w-xl transform transition-transform duration-500 hover:scale-105">
             <video
               src={videoSource}
@@ -17,7 +26,7 @@ const HeroSection = () => {
               className="rounded-2xl object-cover w-full h-auto"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Hero Text */}
         <div className="text-center md:text-left order-2 md:order-1">
@@ -54,7 +63,7 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div> {/* ✅ Corrected closing tag */}
     </div>
   );
 };
