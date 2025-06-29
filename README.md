@@ -1,3 +1,42 @@
+# ⚔️ AllianceForgeMainWeb
+
+🚀 Welcome to the official repository of **Alliance Forge** — a sci-fi-inspired web experience that blends visual aesthetics, modular components, and high-performance technology. This frontend project is built to deliver an immersive and scalable user interface.
+
+---
+
+## 🌐 Live Preview
+
+**🧪 Coming soon:**  
+➡️ [https://allianceforge.online](https://allianceforge.online)
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** + **Vite** — blazing-fast modern web dev
+- **TailwindCSS** — utility-first styling with futuristic design
+- **Lucide Icons** — lightweight, customizable icon set
+- **React Router DOM** — smooth navigation between views
+- **Firebase** (planned backend integration)
+- **GitHub Pages / Vercel / Netlify** (for deployment)
+
+---
+
+## 📁 Project Structure
+
+```bash
+AllianceForgeMainWeb/
+├── public/
+├── src/
+│   ├── assets/            # logos, videos, images
+│   ├── components/        # Navbar, Footer, HeroSection, etc.
+│   ├── pages/             # Marketplace, NotFound, future routes
+│   ├── constants/         # nav menu definitions and configs
+│   ├── App.jsx            # main app logic and routing
+│   └── main.jsx           # React entry point
+├── tailwind.config.js
+├── vite.config.js
+└── package.json
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
