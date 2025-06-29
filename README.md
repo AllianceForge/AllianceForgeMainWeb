@@ -38,6 +38,39 @@ AllianceForgeMainWeb/
 ├── vite.config.js
 └── package.json
 # React + Vite
+Features in Progress
+🌌 Dynamic Marketplace with future Web3 integrations
+
+📦 Modular sections: Hero, Roadmap, FAQ, Forgenomics
+
+📱 Fully responsive layout for mobile and desktop
+
+🧠 Smooth section-based navigation with scroll awareness
+
+💼 WalletConnect UI integration (toggleable)
+
+🧩 Built for scalability and rapid iteration
+
+🚀 Run Locally
+bash
+# Clone the repository
+git clone https://github.com/AllianceForge/AllianceForgeMainWeb.git
+
+# Enter the directory
+cd AllianceForgeMainWeb
+
+# Install dependencies
+npm install
+
+# Start the local development server
+npm run dev
+🧙‍♀️ Contributing
+Ideas, feedback, or issues? Open a pull request or create an issue — your forge is welcome in this alliance ⚔️
+
+📄 License
+This project is licensed under the MIT License.
+
+Crafted with 💻⚡ by the visionary Alliance Forge team
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
