@@ -2,20 +2,24 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import NotFound from './components/NotFound';
 import Marketplace from './components/Marketplace';
+import NotFound from './components/NotFound';
 import video from './assets/video3.mp4';
+import './App.css';
+import './styles/tailwind.css';
 
 // Lazy-load sections
 const HeroSection = React.lazy(() => import('./components/HeroSection'));
+const FeatureSection = React.lazy(() => import('./components/FeatureSection'));
 const ForgenomicsSection = React.lazy(() => import('./components/ForgenomicsSection'));
+const RoadMapSection = React.lazy(() => import('./components/RoadMap'));
 const FAQ = React.lazy(() => import('./components/FAQ'));
 const WalletConnectButton = React.lazy(() => import('./components/WalletConnectButton'));
 
 // Control visibility here
 const showFeature = false;
 const showRoadmap = false;
-const showMarketplace = true;
+const showMarketplace = false;
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -32,9 +36,7 @@ const App = () => {
           playsInline
           preload="metadata"
           onLoadedData={() => setVideoLoaded(true)}
-          className={`w-full h-screen fixed object-cover transition-opacity duration-700 ${
-            videoLoaded ? 'opacity-100' : 'opacity-50'
-          }`}
+          className={`w-full h-screen fixed object-cover transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-50'}`}
         />
 
         {/* Navbar and WalletConnectButton */}
@@ -62,16 +64,26 @@ const App = () => {
                     <div id="home">
                       <HeroSection />
                     </div>
+                    {showFeature && (
+                      <div id="feature">
+                        <FeatureSection />
+                      </div>
+                    )}
                     <div id="forgenomics">
                       <ForgenomicsSection />
                     </div>
+                    {showRoadmap && (
+                      <div id="roadmap">
+                        <RoadMapSection />
+                      </div>
+                    )}
                     <div id="faq">
                       <FAQ />
                     </div>
                   </div>
                 }
               />
-              <Route path="/marketplace" element={<Marketplace />} />
+              {showMarketplace && <Route path="/marketplace" element={<Marketplace />} />}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

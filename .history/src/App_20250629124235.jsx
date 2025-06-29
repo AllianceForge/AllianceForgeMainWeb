@@ -1,10 +1,28 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
 import Marketplace from './components/Marketplace';
 import video from './assets/video3.mp4';
+import Feature from '.components/Featuresection';
+import Roadmap from '.components/Roadmap';
+
+// Importing React and necessary hooks
+import './App.css'; // Assuming you have a CSS file for global styles
+import './index.css'; // Tailwind CSS styles
+import './styles.css'; // Custom styles for the app
+// Importing components
+import HeroSection from './components/HeroSection';
+import ForgenomicsSection from './components/ForgenomicsSection';
+import FAQ from './components/FAQ';
+import WalletConnectButton from './components/WalletConnectButton';
+import './styles.css'; // Custom styles for the app
+import './index.css'; // Tailwind CSS styles
+import './App.css'; // Assuming you have a CSS file for global styles
+
+
+
 
 // Lazy-load sections
 const HeroSection = React.lazy(() => import('./components/HeroSection'));
@@ -13,9 +31,8 @@ const FAQ = React.lazy(() => import('./components/FAQ'));
 const WalletConnectButton = React.lazy(() => import('./components/WalletConnectButton'));
 
 // Control visibility here
-const showFeature = false;
-const showRoadmap = false;
-const showMarketplace = true;
+
+
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);

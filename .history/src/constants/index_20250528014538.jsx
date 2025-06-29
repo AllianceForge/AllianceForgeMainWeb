@@ -13,35 +13,14 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { id: "home", label: "Home", hidden: false },
-  { id: "forgenomics", label: "Forgenomics", hidden: false },
-  { id: "faq", label: "FAQ", hidden: false },
-  { id: "feature", label: "Features", hidden: true }, // Hidden
-  { id: "marketplace", label: "Marketplace", hidden: false }, // seen
-  { id: "roadmap", label: "Roadmap", hidden: true }, // Hidden
+  { id: "home", label: "Home" },
+  { id: "feature", label: "Feature" },
+  { id: "forgenomics", label: "Forgenomics" },
+  { id: "roadmap", label: "Roadmap" },
+  { id: "faq", label: "FAQ" },
+  { id: "marketplace", label: "Marketplace" },
 ];
-export const showFeature = true; // Toggle feature section visibility
-export const showMarketplace = true; // Toggle marketplace section visibility
-export const showRoadmap = true; // Toggle roadmap section visibility
-export const showForgenomics = true; // Toggle forgenomics section visibility
-export const showFAQ = true; // Toggle FAQ section visibility
-export const showFooter = true; // Toggle footer visibility
-export const showWalletConnectButton = true; // Toggle WalletConnect button visibility
-export const showNavbar = true; // Toggle navbar visibility
-export const showHeroSection = true; // Toggle hero section visibility
-export const showNotFound = true; // Toggle NotFound page visibility
-export const showCodeMerge = true; // Toggle Code Merge section visibility
-export const showReviewCode = true; // Toggle Review Code section visibility
-export const showAI = true; // Toggle AI Assistance section visibility
-export const showShareWork = true; // Toggle Share Work section visibility
-export const showTestimonials = true; // Toggle testimonials section visibility
-export const showPricing = true; // Toggle pricing section visibility
-export const showResources = true; // Toggle resources section visibility
-export const showPlatform = true; // Toggle platform section visibility
-export const showCommunity = true; // Toggle community section visibility
-export const showFooterLinks = true; // Toggle footer links visibility
-export const showFooterSocials = true; // Toggle footer socials visibility
-export const showFooterCopyright = true; // Toggle footer copyright visibility
+
 
 export const testimonials = [
   {
@@ -63,7 +42,7 @@ export const testimonials = [
     text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
   },
   {
-    user: "Renee Brown",
+    user: "Ronee Brown",
     company: "Fusion Dynamics",
     image: user4,
     text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
@@ -200,37 +179,3 @@ export const communityLinks = [
   { href: "#", text: "Hackathons" },
   { href: "#", text: "Jobs" },
 ];
-export const footerLinks = [
-  { href: "#", text: "Privacy Policy" },
-  { href: "#", text: "Terms of Service" },
-  { href: "#", text: "Contact Us" },
-  { href: "#", text: "Support" },
-  { href: "#", text: "Feedback" },
-];
-export const footerSocials = [
-  { href: "https://x.com/AllianceForgeHQ", icon: "fab fa-twitter" },
-  { href: "https://github.com/AllianceForge", icon: "fab fa-github" },
-];
-export const footerCopyright = "© 2025 Alliance Forge. All rights reserved.";
-export const footerLogo = "https://allianceforge.online/logo.png"; // Replace with your actual logo URL
-export const footerDescription =
-  "Alliance Forge is a cutting-edge platform that revolutionizes the way developers create and share virtual reality applications. With its intuitive drag-and-drop interface, multi-platform compatibility, and powerful collaboration tools, Alliance Forge empowers developers to bring their VR visions to life with ease and efficiency.";
-export const footerContact = {
-  email: "allianceforge22@gmail.com"
-};
-export const footerAddress = "1234 Alliance Forge St, VR City, VR 56789";
-export const footerPhone = "+1 (123) 456-7890"; // Replace with your actual phone number
-export const footerLinksData = {
-  resources: resourcesLinks,
-  platform: platformLinks,
-  community: communityLinks,
-  footer: footerLinks,
-  socials: footerSocials,
-};
-export const footerData = {
-  logo: footerLogo,
-  description: footerDescription,
-  contact: footerContact,
-  address: footerAddress,
-  phone: footerPhone,
-}

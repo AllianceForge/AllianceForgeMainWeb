@@ -63,11 +63,11 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex flex-grow justify-between w-full space-x-4">
+        <ul className="hidden lg:flex flex-grow justify-center items-center space-x-8">
           {navItems
-            .filter((item) => !item.hidden) // Show Marketplace, hide Features, Roadmap
+            .filter((item) => !item.hidden) // Hide Features, Roadmap
             .map((item) => (
-              <li key={item.id} className="flex-1 text-center">
+              <li key={item.id}>
                 <a
                   href={item.id === "marketplace" ? "/marketplace" : `#${item.id}`}
                   onClick={(e) => handleNavigation(e, item.id)}
@@ -94,7 +94,7 @@ const Navbar = () => {
         <div className="lg:hidden absolute top-full left-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-md rounded-b-md p-6">
           <ul className="space-y-6 flex flex-col items-center">
             {navItems
-              .filter((item) => !item.hidden) // Show Marketplace, hide Features, Roadmap
+              .filter((item) => !item.hidden) // Hide Features, Roadmap
               .map((item) => (
                 <li key={item.id}>
                   <a

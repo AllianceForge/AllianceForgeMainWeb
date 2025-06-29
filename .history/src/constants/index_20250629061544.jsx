@@ -13,12 +13,12 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { id: "home", label: "Home", hidden: false },
-  { id: "forgenomics", label: "Forgenomics", hidden: false },
-  { id: "faq", label: "FAQ", hidden: false },
-  { id: "feature", label: "Features", hidden: true }, // Hidden
-  { id: "marketplace", label: "Marketplace", hidden: false }, // seen
-  { id: "roadmap", label: "Roadmap", hidden: true }, // Hidden
+  { id: "home", label: "Home" },
+  { id: "feature", label: "Features", hidden: true },   // 👈 hidden
+  { id: "forgenomics", label: "Forgenomics" },
+  { id: "roadmap", label: "Roadmap" },
+  { id: "marketplace", label: "Marketplace", hidden: true }, // 👈 hidden
+  { id: "faq", label: "FAQ" }
 ];
 export const showFeature = true; // Toggle feature section visibility
 export const showMarketplace = true; // Toggle marketplace section visibility

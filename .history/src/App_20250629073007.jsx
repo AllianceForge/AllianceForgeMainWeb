@@ -3,7 +3,6 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
-import Marketplace from './components/Marketplace';
 import video from './assets/video3.mp4';
 
 // Lazy-load sections
@@ -15,7 +14,7 @@ const WalletConnectButton = React.lazy(() => import('./components/WalletConnectB
 // Control visibility here
 const showFeature = false;
 const showRoadmap = false;
-const showMarketplace = true;
+const showMarketplace = false;
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -71,7 +70,6 @@ const App = () => {
                   </div>
                 }
               />
-              <Route path="/marketplace" element={<Marketplace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

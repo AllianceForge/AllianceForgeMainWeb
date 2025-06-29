@@ -13,12 +13,12 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { id: "home", label: "Home", hidden: false },
-  { id: "forgenomics", label: "Forgenomics", hidden: false },
-  { id: "faq", label: "FAQ", hidden: false },
-  { id: "feature", label: "Features", hidden: true }, // Hidden
-  { id: "marketplace", label: "Marketplace", hidden: false }, // seen
-  { id: "roadmap", label: "Roadmap", hidden: true }, // Hidden
+  { id: "home", label: "Home" },
+  { id: "feature", label: "Features", hidden: true },   // 👈 oculto
+  { id: "forgenomics", label: "Forgenomics" },
+  { id: "roadmap", label: "Roadmap" },
+  { id: "marketplace", label: "Marketplace", hidden: true }, // 👈 oculto
+  { id: "faq", label: "FAQ" }
 ];
 export const showFeature = true; // Toggle feature section visibility
 export const showMarketplace = true; // Toggle marketplace section visibility
@@ -63,7 +63,7 @@ export const testimonials = [
     text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
   },
   {
-    user: "Renee Brown",
+    user: "Ronee Brown",
     company: "Fusion Dynamics",
     image: user4,
     text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
