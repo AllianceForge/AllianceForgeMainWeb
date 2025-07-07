@@ -4,9 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
 import Marketplace from './components/Marketplace';
-import video from './assets/video3.mp4';
-
-// Lazy-load sections
+import video from './assets/video3.mp4';// Lazy-load sections
 const HeroSection = React.lazy(() => import('./components/HeroSection'));
 const ForgenomicsSection = React.lazy(() => import('./components/ForgenomicsSection'));
 const FAQ = React.lazy(() => import('./components/FAQ'));

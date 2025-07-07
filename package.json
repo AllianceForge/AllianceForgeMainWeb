@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/cli": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
     "@heroicons/react": "^2.2.0",
     "@walletconnect/client": "^1.8.0",
     "@walletconnect/core": "^2.21.1",

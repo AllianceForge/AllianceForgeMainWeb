@@ -1,0 +1,15 @@
+export const navItems = [
+  { id: "home", label: "Home" },
+  { id: "feature", label: "Features", hidden: true },
+  { id: "marketplace", label: "Marketplace", hidden: true },
+  { id: "faq", label: "FAQ" },
+  {
+    id: "whitepaper",
+    label: "Whitepaper",
+    href: "https://gemini.google.com/share/9a19f321e25c", // Link to your document
+    external: true,
+    hidden: false
+  }
+];
+
+export const showFeature = true;

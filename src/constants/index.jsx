@@ -17,7 +17,7 @@ export const navItems = [
   { id: "forgenomics", label: "Forgenomics", hidden: false },
   { id: "faq", label: "FAQ", hidden: false },
   { id: "feature", label: "Features", hidden: true }, // Hidden
-  { id: "marketplace", label: "Marketplace", hidden: false }, // seen
+  { id: "marketplace", label: "Marketplace", hidden: false }, 
   { id: "roadmap", label: "Roadmap", hidden: true }, // Hidden
 ];
 export const showFeature = true; // Toggle feature section visibility
