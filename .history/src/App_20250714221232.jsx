@@ -6,42 +6,42 @@ import NotFound from './components/NotFound';
 import Marketplace from './components/Marketplace';
 import video from './assets/video3.mp4';
 
-// Lazy-load sections and modals
+// Carga diferida de secciones y modales
 const HeroSection = React.lazy(() => import('./components/HeroSection'));
 const ForgenomicsSection = React.lazy(() => import('./components/ForgenomicsSection.jsx'));
-// const FAQSection = React.lazy(() => import("./components/FAQSection.jsx")); // Commented out to remove FAQ section
+// const FAQSection = React.lazy(() => import("./components/FAQSection.jsx")); // Comentado para eliminar la sección FAQ
 const WalletConnectButton = React.lazy(() => import('./components/WalletConnectButton'));
 
-// Import the modals
+// Importar los modales
 const ForgenomicsModal = React.lazy(() => import('./components/ForgenomicsModal.jsx'));
 const FAQModal = React.lazy(() => import('./components/FAQModal.jsx'));
-const WhitepaperModal = React.lazy(() => import('./components/WhitepaperModal.jsx')); // Import WhitepaperModal
+const WhitepaperModal = React.lazy(() => import('./components/WhitepaperModal.jsx')); // Importar WhitepaperModal
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   
-  // State to manage the visibility of the modals
+  // Estado para gestionar la visibilidad de los modales
   const [isForgenomicsModalOpen, setIsForgenomicsModalOpen] = useState(false);
   const [isFaqModalOpen, setIsFaqModalOpen] = useState(false);
-  const [isWhitepaperModalOpen, setIsWhitepaperModalOpen] = useState(false); // State for WhitepaperModal
+  const [isWhitepaperModalOpen, setIsWhitepaperModalOpen] = useState(false); // Estado para WhitepaperModal
 
-  // State to manage the visibility of the WalletConnectButton
-  const [isWalletVisible] = useState(false); // Change to 'true' to show it
+  // Estado para gestionar la visibilidad del WalletConnectButton
+  const [isWalletVisible] = useState(false); // Cambiar a 'true' para mostrarlo
 
-  // Functions to open and close the modals
+  // Funciones para abrir y cerrar los modales
   const openForgenomicsModal = () => setIsForgenomicsModalOpen(true);
   const closeForgenomicsModal = () => setIsForgenomicsModalOpen(false);
   
   const openFaqModal = () => setIsFaqModalOpen(true);
   const closeFaqModal = () => setIsFaqModalOpen(false);
 
-  const openWhitepaperModal = () => setIsWhitepaperModalOpen(true); // Function to open WhitepaperModal
-  const closeWhitepaperModal = () => setIsWhitepaperModalOpen(false); // Function to close WhitepaperModal
+  const openWhitepaperModal = () => setIsWhitepaperModalOpen(true); // Función para abrir WhitepaperModal
+  const closeWhitepaperModal = () => setIsWhitepaperModalOpen(false); // Función para cerrar WhitepaperModal
 
   return (
     <Router>
       <div className="min-h-screen relative">
-        {/* Background video */}
+        {/* Video de fondo */}
         <video
           src={video}
           autoPlay
@@ -55,24 +55,24 @@ const App = () => {
           }`}
         />
 
-        {/* Navbar and WalletConnectButton */}
-        {/* Pass all modal open functions to the Navbar */}
+        {/* Barra de navegación y botón de conexión de billetera */}
+        {/* Pasar todas las funciones de apertura de modal a la barra de navegación */}
         <Navbar
           openForgenomicsModal={openForgenomicsModal}
           openFaqModal={openFaqModal}
-          openWhitepaperModal={openWhitepaperModal} // Pass openWhitepaperModal
+          openWhitepaperModal={openWhitepaperModal} // Pasar openWhitepaperModal
         />
         
-        {/* Conditionally render the WalletConnectButton based on its state */}
+        {/* Renderizar condicionalmente el WalletConnectButton según su estado */}
         {isWalletVisible && (
           <div className="fixed top-4 left-4 z-20">
-            <Suspense fallback={<p className="text-white text-center mt-4">Loading Wallet...</p>}>
+            <Suspense fallback={<p className="text-white text-center mt-4">Cargando billetera...</p>}>
               <WalletConnectButton />
             </Suspense>
           </div>
         )}
 
-        {/* Main content */}
+        {/* Contenido principal */}
         <main className="relative z-10 min-h-screen flex flex-col justify-center items-center text-white">
           <Suspense
             fallback={
@@ -89,11 +89,11 @@ const App = () => {
                     <div id="home">
                       <HeroSection />
                     </div>
-                    {/* Pass openForgenomicsModal to ForgenomicsSection */}
+                    {/* Pasar openForgenomicsModal a ForgenomicsSection */}
                     <div id="forgenomics">
                       <ForgenomicsSection openForgenomicsModal={openForgenomicsModal} />
                     </div>
-                    {/* The FAQSection has been removed/commented out here */}
+                    {/* La sección FAQSection ha sido eliminada/comentada aquí */}
                     {/*
                     <div id="faq">
                         <FAQSection openFaqModal={openFaqModal} />
@@ -108,24 +108,24 @@ const App = () => {
           </Suspense>
         </main>
 
-        {/* Footer */}
-        <Suspense fallback={<p className="text-white text-center mt-4">Loading Footer...</p>}>
+        {/* Pie de página */}
+        <Suspense fallback={<p className="text-white text-center mt-4">Cargando pie de página...</p>}>
           <Footer />
         </Suspense>
 
-        {/* Render the modals conditionally at the root level */}
+        {/* Renderizar los modales condicionalmente en el nivel raíz */}
         {isForgenomicsModalOpen && (
-          <Suspense fallback={<p>Loading Forgenomics...</p>}>
+          <Suspense fallback={<p>Cargando Forgenomics...</p>}>
             <ForgenomicsModal onClose={closeForgenomicsModal} />
           </Suspense>
         )}
         {isFaqModalOpen && (
-          <Suspense fallback={<p>Loading FAQ...</p>}>
+          <Suspense fallback={<p>Cargando FAQ...</p>}>
             <FAQModal onClose={closeFaqModal} />
           </Suspense>
         )}
-        {isWhitepaperModalOpen && ( // Conditionally render WhitepaperModal
-          <Suspense fallback={<p>Loading Whitepaper...</p>}>
+        {isWhitepaperModalOpen && ( // Renderizar condicionalmente WhitepaperModal
+          <Suspense fallback={<p>Cargando Whitepaper...</p>}>
             <WhitepaperModal onClose={closeWhitepaperModal} />
           </Suspense>
         )}
@@ -135,4 +135,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -9,7 +9,7 @@ import video from './assets/video3.mp4';
 // Lazy-load sections and modals
 const HeroSection = React.lazy(() => import('./components/HeroSection'));
 const ForgenomicsSection = React.lazy(() => import('./components/ForgenomicsSection.jsx'));
-// const FAQSection = React.lazy(() => import("./components/FAQSection.jsx")); // Commented out to remove FAQ section
+// const FAQSection = React.lazy(() => import("./components/FAQSection.jsx")); // Comentado o eliminado
 const WalletConnectButton = React.lazy(() => import('./components/WalletConnectButton'));
 
 // Import the modals
@@ -35,8 +35,8 @@ const App = () => {
   const openFaqModal = () => setIsFaqModalOpen(true);
   const closeFaqModal = () => setIsFaqModalOpen(false);
 
-  const openWhitepaperModal = () => setIsWhitepaperModalOpen(true); // Function to open WhitepaperModal
-  const closeWhitepaperModal = () => setIsWhitepaperModalOpen(false); // Function to close WhitepaperModal
+  const openWhitepaperModal = () => setIsWhitepaperModalOpen(true); // Open WhitepaperModal function
+  const closeWhitepaperModal = () => setIsWhitepaperModalOpen(false); // Close WhitepaperModal function
 
   return (
     <Router>
@@ -93,12 +93,10 @@ const App = () => {
                     <div id="forgenomics">
                       <ForgenomicsSection openForgenomicsModal={openForgenomicsModal} />
                     </div>
-                    {/* The FAQSection has been removed/commented out here */}
-                    {/*
+                    {/* Pass openFaqModal to FAQSection */}
                     <div id="faq">
-                        <FAQSection openFaqModal={openFaqModal} />
+                      <FAQSection openFaqModal={openFaqModal} />
                     </div>
-                    */}
                   </div>
                 }
               />
@@ -135,4 +133,3 @@ const App = () => {
 };
 
 export default App;
-

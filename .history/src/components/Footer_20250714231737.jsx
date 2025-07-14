@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Social links: X → Discord → Telegram, centered */}
         <div className="flex justify-center space-x-4 mt-4">
           {/* X (formerly Twitter) */}
-          <a href="https://x.com/AllianceForgeHQ"
+          <a href="https://x.com/allianceForgeHQ"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white"
