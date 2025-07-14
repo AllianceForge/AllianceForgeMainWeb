@@ -1,0 +1,51 @@
+// src/components/ForgenomicsSection.jsx
+import PropTypes from "prop-types";
+import allianceForgeLogoImage from "../assets/logo.png";
+
+const ForgenomicsSection = ({ openForgenomicsModal }) => {
+  return (
+    <section
+      id="forgenomics"
+      className="py-16 bg-gray-900 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg text-white"
+    >
+      <div className="container mx-auto px-6 text-center">
+        {/* Section Header */}
+        <h2 className="text-4xl font-bold mb-10 bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
+          Forgonomics
+        </h2>
+
+        {/* Button to open the modal - Click handler moved directly to the button */}
+        <div
+          className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-cyan-500/50 transition-transform transform hover:scale-105 inline-block cursor-pointer"
+          // Removed onClick from this div
+        >
+          <div className="w-24 h-24 mx-auto mb-4">
+            <img
+              src={allianceForgeLogoImage}
+              alt="Forgenomics Whitepaper"
+              className="w-full h-full object-contain rounded-2xl shadow-md"
+            />
+          </div>
+          <h3 className="text-lg font-semibold mb-2 bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
+            Forgonomics Whitepaper
+          </h3>
+          <p className="text-sm text-gray-300 mb-4">
+            Click to see the complete tokenomics of Alliance Forge.
+          </p>
+          <button
+            onClick={openForgenomicsModal} // <--- IMPORTANT: onClick is now on the button
+            className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-300 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:shadow-cyan-500/50 transition-transform transform hover:scale-105"
+          >
+            Open Forgenomics
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+ForgenomicsSection.propTypes = {
+  openForgenomicsModal: PropTypes.func.isRequired,
+};
+
+export default ForgenomicsSection;

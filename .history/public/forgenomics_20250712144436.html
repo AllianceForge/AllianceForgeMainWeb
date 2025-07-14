@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="env" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgenomics: Alliance Forge Economic Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .cyan-heading {
+            color: #22d3ee; /* Tailwind's cyan-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Main Title -->
+        <div class="text-center py-16">
+            <h1 class="text-5xl md:text-7xl font-bold text-white">
+                Forgenomics
+            </h1>
+        </div>
+
+        <!-- Content Container -->
+        <div class="space-y-12">
+            
+            <!-- Header Section -->
+            <header class="text-center border-b border-gray-700 pb-8">
+                <h2 class="cyan-heading text-3xl md:text-4xl font-bold mb-4">Alliance Forge: Economic Blueprint</h2>
+                <h3 class="cyan-heading text-2xl md:text-3xl font-semibold mb-4">The Immutable Codex of a Digital Nation</h3>
+                <p class="max-w-4xl mx-auto text-gray-400">
+                    This document serves as the official economic blueprint for the world of Alliance Forge. It is the single source of truth for the game's economic mechanics, operational standards, and strategic directives.
+                </p>
+                <p class="max-w-4xl mx-auto text-sm text-gray-500 mt-4">
+                    <strong>Preamble & Disclaimer:</strong> This blueprint details the foundational economic system of Alliance Forge. While the core principles outlined here are definitive, this document is subject to refinement prior to the game's official launch. The first binding version of our Terms of Use will be released at launch. Following the official launch, any amendments to this economic system can only be enacted through the Alliance Forge DAO, as stipulated within this codex.
+                </p>
+            </header>
+
+            <!-- Directive 01 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 01: Core Principles - Forging a New Era</h3>
+                <p class="mb-6">The Alliance Forge economy is engineered for longevity and resilience. We are building a self-sustaining digital nation, not a short-term speculative bubble. Our primary objective is to create a robust ecosystem that rewards meaningful participation and strategic, long-term investment.</p>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h4 class="text-xl font-semibold text-white mb-2">A Revolution in Gaming: "Play-and-Own"</h4>
+                    <p>At its heart, Alliance Forge is a high-quality, engaging game. We have evolved beyond the flawed "Play-to-Earn" (P2E) model to pioneer a "Play-and-Own" (P&O) system. This approach prioritizes immersive gameplay while offering players true, verifiable ownership of their in-game assets as NFTs. This fosters a deep connection between players and the game world, aligning the success of both developers and the community through perpetual royalties from secondary market sales.</p>
+                </div>
+            </section>
+
+            <!-- Directive 02 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 02: The Three-Pillar Economic Architecture</h3>
+                <p class="mb-6">To ensure stability and a frictionless experience, our economy is built on a three-tiered asset system. This structure insulates our core token from inflationary pressures while providing a seamless on-ramp for every type of player.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="text-xl font-semibold text-white mb-2">🪙 Auron (In-Game Gold): The Off-Chain Currency</h4>
+                        <p>Auron is a traditional in-game currency for players who have not connected a Web3 wallet. It is earned through gameplay and used for essential in-game activities like starter-gear repairs, regional fast travel, and acquiring entry-level cosmetic titles. Auron is strictly an off-chain asset and can never be converted to on-chain tokens.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="text-xl font-semibold text-white mb-2">✨ $ALLIANCE (The Soulbound Token): The On-Chain Reputation Token</h4>
+                        <p>For wallet-connected players, $ALLIANCE is the primary on-chain resource. It is earned through daily bounties, PvP victories, and world events. As a non-transferable (soulbound) token with an uncapped supply, $ALLIANCE represents a player's active reputation and in-game achievements. Its sole function is to be deposited into the Vesting Contract for conversion into our core token, $CYBER.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="text-xl font-semibold text-white mb-2">💎 $CYBER (The Governance & Value-Accrual Token): The Core Asset</h4>
+                        <p>$CYBER is the heart of the Alliance Forge ecosystem. It is a fixed-supply, ERC-20 token representing a direct stake in our digital nation. All high-value assets, including Land NFTs and Command Node Licenses, are exclusively traded in $CYBER.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directive 03 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 03: The Vesting Forge - Bridging Earning and Owning</h3>
+                <p class="mb-6">The Vesting Contract is the critical bridge between in-game effort and real-world ownership. It is meticulously designed to reward long-term commitment and promote economic stability.</p>
+                <ul class="list-disc list-inside space-y-2 bg-gray-800 p-6 rounded-lg">
+                    <li><strong>The Process:</strong> Players irreversibly deposit their earned, soulbound $ALLIANCE into the Vesting Contract.</li>
+                    <li><strong>Linear Vesting:</strong> This deposit initiates a linear 28-day vesting schedule.</li>
+                    <li><strong>Daily Rewards:</strong> Each day, 1/28th of the corresponding $CYBER value becomes claimable by the player.</li>
+                    <li><strong>DAO Control:</strong> While the 28-day vesting period is the launch parameter, the Alliance Forge DAO will hold the authority to propose and vote on changes to this duration post-launch.</li>
+                </ul>
+            </section>
+
+            <!-- Directive 04 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 04: $CYBER Tokenomics - The Power of Scarcity</h3>
+                <p class="mb-6">The total supply of $CYBER is permanently fixed at 2,200,000,000 tokens. The 15-year distribution schedule is strategically designed to reward our earliest and most dedicated participants.</p>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-gray-800 rounded-lg">
+                        <thead class="bg-gray-700">
+                            <tr>
+                                <th class="p-4 text-left text-white">Category</th>
+                                <th class="p-4 text-left text-white">Allocation</th>
+                                <th class="p-4 text-left text-white">Total Tokens</th>
+                                <th class="p-4 text-left text-white">Strategic Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700">
+                                <td class="p-4">Player Rewards</td>
+                                <td class="p-4">30%</td>
+                                <td class="p-4">660,000,000</td>
+                                <td class="p-4">Funds the Vesting Contract for the conversion of $ALLIANCE to $CYBER.</td>
+                            </tr>
+                            <tr class="bg-gray-800/50 border-b border-gray-700">
+                                <td class="p-4">Staking Rewards</td>
+                                <td class="p-4">20%</td>
+                                <td class="p-4">440,000,000</td>
+                                <td class="p-4">Rewards for Landowners and general $CYBER stakers.</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="p-4">Team</td>
+                                <td class="p-4">15%</td>
+                                <td class="p-4">330,000,000</td>
+                                <td class="p-4">1-year cliff, then 4-year linear vesting to align the team with long-term success.</td>
+                            </tr>
+                            <tr class="bg-gray-800/50 border-b border-gray-700">
+                                <td class="p-4">Ecosystem & Dev Fund</td>
+                                <td class="p-4">13%</td>
+                                <td class="p-4">286,000,000</td>
+                                <td class="p-4">Funds community grants, partnerships, and developer tools, governed by the DAO.</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="p-4">Initial Liquidity & Public Sale</td>
+                                <td class="p-4">10%</td>
+                                <td class="p-4">220,000,000</td>
+                                <td class="p-4">For the public launch (LBP) and initial exchange liquidity. Unsold tokens will be burned.</td>
+                            </tr>
+                            <tr class="bg-gray-800/50 border-b border-gray-700">
+                                <td class="p-4">Node Operator Rewards</td>
+                                <td class="p-4">10%</td>
+                                <td class="p-4">220,000,000</td>
+                                <td class="p-4">The sole income source for vital network node operators.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4">Airdrops</td>
+                                <td class="p-4">2%</td>
+                                <td class="p-4">44,000,000</td>
+                                <td class="p-4">Rewards loyal commanders based on mini-game performance, whitelisting, and early investment.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-right mt-4">
+                    <button class="bg-cyan-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors">
+                        Export to Sheets
+                    </button>
+                </div>
+            </section>
+            <!-- Directive 05 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 05: A Sustainable Economy - Value Creation and Stability</h3>
+                <p class="mb-6">Our economy is engineered for the long term, supported by defined revenue streams and powerful token sinks.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold text-white mb-2">Revenue Streams</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Node License Sales:</strong> One-time fees (paid in USDC) for lifetime access to operate a game node.</li>
+                            <li><strong>Marketplace Fees:</strong> A 2.5% fee on all peer-to-peer asset transactions conducted in $CYBER.</li>
+                            <li><strong>Primary Sales:</strong> Revenue from first-party cosmetic items and event passes sold in $CYBER.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold text-white mb-2">Economic Stabilizers</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>$CYBER Sink (Staking):</strong> Staking $CYBER removes it from active circulation. A 7-day unstaking cooldown period is implemented to prevent abrupt market volatility.</li>
+                            <li><strong>Decay Protocol ($ALLIANCE & $CYBER Sink):</strong> To create a powerful deflationary loop, any earned $ALLIANCE not deposited into the Vesting Contract within 45 days is automatically burned. For every $ALLIANCE token burned this way, a corresponding $CYBER token from the "Player Rewards" allocation is also permanently burned, directly linking player commitment to the scarcity of $CYBER.</li>
+                            <li><strong>The Treasury & Buy-Back Protocol:</strong> A portion of all ecosystem revenue flows into the Treasury. The Treasury will execute weekly market buy-backs of $CYBER and distribute it proportionally to all active stakers. This creates a direct feedback loop between ecosystem activity and token value, rewarding our most committed community members.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directive 06 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 06: Your Path to Prosperity - How to Participate</h3>
+                <p class="mb-6">Alliance Forge offers clear and rewarding paths for every type of participant.</p>
+                    <div class="space-y-6">
+                        <div class="bg-gray-800 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-white mb-2">The Asset Owner Path</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Landowners:</strong> Owners of Land NFTs receive a passive yield of $CYBER from the "Staking Rewards" pool.</li>
+                            <li><strong>Node Operators:</strong> Operators of our game's infrastructure earn a steady stream of $CYBER from the "Node Operator Rewards" pool. Nodes are available in "Peace" and "War" configurations, with rarity tiers (Core, Mythic, Legendary, Epic, Rare, Uncommon, Common) that provide powerful in-game buffs.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold text-white mb-2">The Active Player Path</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Play and Earn Auron:</strong> Simply download the game and enjoy the traditional, off-chain economy without needing a wallet.</li>
+                            <li><strong>Connect and Earn $ALLIANCE:</strong> Connect a Web3 wallet to begin earning on-chain $ALLIANCE for your in-game achievements.</li>
+                            <li><strong>Vest for Value:</strong> Deposit your $ALLIANCE into the Vesting Forge to begin the 28-day conversion process into liquid $CYBER.</li>
+                            <li><strong>Own and Participate:</strong> Use your vested $CYBER to stake for revenue sharing, acquire valuable Land NFTs, or purchase a Node License through The Nexus, our dedicated Digital Asset Command Interface (DACI).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directive 07 -->
+            <section>
+                <h3 class="cyan-heading text-2xl font-bold mb-4">Directive 07: Development Roadmap & Execution Plan*</h3>
+                <p class="mb-6">Our launch is strategically phased to ensure security, foster sustainable growth, and deliver a polished experience as we transition governance to our community.</p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 1: Design & Concept (Nov 2024 – June 2025):</strong> Comprehensive game design, concept art, and initial tokenomics.</div>
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 2: Foundation & Pre-Alpha (July 2025 – Jan 2026):</strong> Core engine architecture, initial systems development, and blockchain integration mockups.</div>
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 3: Alpha & Demo Prep (Feb 2026 – July 2026):</strong> Core gameplay loop implementation and playable public demo development.</div>
+                    <div class="p-4 bg-cyan-800 rounded-lg text-white font-bold"><strong>Milestone: Public Demo Release (July 2026)</strong></div>
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 4: Alpha Testing & Feedback (Aug 2026 – Jan 2027):</strong> Feedback gathering, asset expansion, and progression system implementation.</div>
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 5: Beta Phase (Feb 2027 – July 2027):</strong> Content expansion, alliance features, stress testing, and smart contract audits.</div>
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 6: Full Launch (Anticipated Late 2027 / Early 2028):</strong> Official PC and Mobile release, full feature implementation.</div>
+                    <div class="p-4 bg-gray-800 rounded-lg"><strong>Phase 7: Post-Launch Evolution (2028 and Beyond):</strong> Seasonal updates, esports, and DAO-driven development.</div>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">*Note on Timelines: These projections are based on current resources. Timelines may be accelerated with additional funding or the contributions of skilled volunteers who wish to become part of the Alliance Forge journey.</p>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

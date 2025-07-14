@@ -11,20 +11,20 @@ const Footer = () => {
 
         {/* Legal links */}
         <div className="flex justify-center space-x-4 mt-2">
-          <a href="Privacy Policy for Alliance Forge.html" className="text-gray-400 hover:text-white">
-            Privacy Policy
-          </a>
-          <a href="term-of-service.html" className="text-gray-400 hover:text-white">
-            Terms of Service
-          </a>
-          <a href="support.html" className="text-gray-400 hover:text-white">
-            Support
-          </a>
+        <a href="/privacy-policy.html" className="text-gray-400 hover:text-white">
+        Privacy Policy
+        </a>
+        <a href="/terms-of-use.html" className="text-gray-400 hover:text-white">
+        Terms of Use
+        </a>
+        <a href="/support.html" className="text-gray-400 hover:text-white">
+        Support
+        </a>
         </div>
 
        {/* Social links: Discord → Telegram → X, centered */}
         <div className="flex justify-center space-x-4 mt-4">
-          <a href="https://discord.gg/5VRn4ShD"
+          <a href=" https://discord.gg/ZJwgzRZczS"
   			target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white"

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgenomics: Alliance Forge Economic Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* This custom style block is identical to whitepapermodal.html to ensure visual consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e0e0e0;
+            background-image: linear-gradient(rgba(10, 10, 15, 0.97), rgba(10, 10, 15, 1)), url('https://placehold.co/1920x1080/0a0a0f/1a1a2e?text=');
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+        }
+        h2 {
+            border-left: 4px solid #4299e1;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .token-icon {
+            display: inline-block;
+            font-size: 1.25em;
+            text-shadow: 0 0 15px currentColor;
+            vertical-align: middle;
+            margin-right: 0.25rem;
+        }
+        .auron-color { color: #facc15; }
+        .alliance-color { color: #818cf8; }
+        .cyber-color { color: #38bdf8; }
+        .card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(66, 153, 225, 0.5);
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+        th, td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+        }
+        th {
+            background-color: rgba(255, 255, 255, 0.05);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-16 md:pb-24 space-y-24">
+            
+            <!-- Page Header -->
+            <section id="hero" class="text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-widest text-white leading-tight">
+                    Forgenomics
+                </h1>
+                <p class="mt-4 text-lg md:text-2xl text-blue-300 font-orbitron font-light tracking-wide">The Immutable Codex of a Digital Nation</p>
+                <p class="mt-8 mx-auto max-w-4xl text-lg text-gray-400">
+                    This document serves as the official economic blueprint for the world of Alliance Forge. It is the single source of truth for the game's economic mechanics, operational standards, and strategic directives.
+                </p>
+                 <!-- Disclaimer -->
+                 <div class="mt-12 max-w-4xl mx-auto p-6 border border-yellow-500/30 bg-yellow-500/10 rounded-lg">
+                    <h3 class="font-orbitron font-bold text-yellow-300">Preamble & Disclaimer</h3>
+                    <p class="mt-2 text-yellow-200/80">
+                        This blueprint details the foundational economic system of Alliance Forge. While the core principles outlined here are definitive, this document is subject to refinement prior to the game's official launch. The first binding version of our Terms of Use will be released at launch. Following the official launch, any amendments to this economic system can only be enacted through the Alliance Forge DAO, as stipulated within this codex.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Directive 01 -->
+            <section id="directive-01">
+                <h2 class="text-3xl lg:text-4xl">Directive 01: Core Principles</h2>
+                <div class="card p-6 md:p-8 mt-8">
+                    <h3 class="text-2xl text-blue-300 font-bold">Forging a New Era</h3>
+                    <p class="mt-4 text-gray-300 leading-relaxed">The Alliance Forge economy is engineered for longevity and resilience. We are building a self-sustaining digital nation, not a short-term speculative bubble. Our primary objective is to create a robust ecosystem that rewards meaningful participation and strategic, long-term investment.</p>
+                    <div class="mt-6 p-6 rounded-lg bg-black/20 border border-white/10">
+                        <h4 class="text-xl font-semibold text-white mb-2 font-orbitron">A Revolution in Gaming: "Play-and-Own"</h4>
+                        <p class="text-gray-300 leading-relaxed">At its heart, Alliance Forge is a high-quality, engaging game. We have evolved beyond the flawed "Play-to-Earn" (P2E) model to pioneer a "Play-and-Own" (P&O) system. This approach prioritizes immersive gameplay while offering players true, verifiable ownership of their in-game assets as NFTs. This fosters a deep connection between players and the game world, aligning the success of both developers and the community through perpetual royalties from secondary market sales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directive 02 -->
+            <section id="directive-02">
+                <h2 class="text-3xl lg:text-4xl">Directive 02: Economic Architecture</h2>
+                 <p class="text-lg text-gray-400 max-w-4xl">To ensure stability and a frictionless experience, our economy is built on a three-tiered asset system. This structure insulates our core token from inflationary pressures while providing a seamless on-ramp for every type of player.</p>
+                <div class="mt-10 grid md:grid-cols-3 gap-8">
+                    <!-- Auron -->
+                    <div class="card p-6 text-center">
+                        <div class="inline-block p-4 bg-yellow-500/10 rounded-full"><span class="token-icon auron-color text-4xl">🪙</span></div>
+                        <h3 class="mt-4 text-2xl font-bold auron-color">Auron (Off-Chain)</h3>
+                        <p class="mt-4 text-gray-300 text-left">A traditional in-game currency for players without a connected Web3 wallet. Used for starter-gear repairs, fast travel, and cosmetics. Auron is strictly off-chain and can never be converted to on-chain tokens.</p>
+                    </div>
+                    <!-- $ALLIANCE -->
+                    <div class="card p-6 text-center">
+                        <div class="inline-block p-4 bg-indigo-500/10 rounded-full"><span class="token-icon alliance-color text-4xl">✨</span></div>
+                        <h3 class="mt-4 text-2xl font-bold alliance-color">$ALLIANCE (Soulbound)</h3>
+                        <p class="mt-4 text-gray-300 text-left">The primary on-chain resource for wallet-connected players, earned through gameplay. As a non-transferable token, it represents reputation. Its sole function is to be deposited into the Vesting Contract for conversion into $CYBER.</p>
+                    </div>
+                    <!-- $CYBER -->
+                    <div class="card p-6 text-center">
+                        <div class="inline-block p-4 bg-blue-500/10 rounded-full"><span class="token-icon cyber-color text-4xl">💎</span></div>
+                        <h3 class="mt-4 text-2xl font-bold cyber-color">$CYBER (Core Asset)</h3>
+                        <p class="mt-4 text-gray-300 text-left">The heart of the ecosystem. A fixed-supply, ERC-20 token representing a direct stake in our digital nation. All high-value assets, like Land NFTs, are exclusively traded in $CYBER.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directive 03 -->
+            <section id="directive-03">
+                <h2 class="text-3xl lg:text-4xl">Directive 03: The Vesting Forge</h2>
+                 <p class="text-lg text-gray-400 max-w-4xl">The Vesting Contract is the critical bridge between in-game effort and real-world ownership, designed to reward long-term commitment.</p>
+                <div class="mt-8 card p-6 md:p-8">
+                    <ul class="list-disc list-inside space-y-4 text-lg text-gray-300">
+                        <li><strong>The Process:</strong> Players irreversibly deposit their earned, soulbound <span class="alliance-color font-bold">$ALLIANCE</span> into the Vesting Contract.</li>
+                        <li><strong>Linear Vesting:</strong> This deposit initiates a linear 28-day vesting schedule.</li>
+                        <li><strong>Daily Rewards:</strong> Each day, 1/28th of the corresponding <span class="cyber-color font-bold">$CYBER</span> value becomes claimable by the player.</li>
+                        <li><strong>DAO Control:</strong> While the 28-day vesting period is the launch parameter, the Alliance Forge DAO will hold the authority to propose and vote on changes to this duration post-launch.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Directive 04 -->
+            <section id="directive-04">
+                <h2 class="text-3xl lg:text-4xl">Directive 04: $CYBER Tokenomics</h2>
+                <p class="text-lg text-gray-400 max-w-4xl">The total supply of $CYBER is permanently fixed at <span class="font-bold text-blue-300">2,200,000,000</span> tokens. The 15-year distribution schedule is strategically designed to reward our earliest and most dedicated participants.</p>
+                <div class="mt-10 card table-wrapper">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Category</th>
+                                <th class="text-right">Allocation</th>
+                                <th class="text-right">Total Tokens</th>
+                                <th class="text-left">Strategic Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr>
+                                <td class="font-semibold">Player Rewards</td>
+                                <td class="text-right">30%</td>
+                                <td class="text-right">660,000,000</td>
+                                <td>Funds the Vesting Contract for converting $ALLIANCE to $CYBER.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Staking Rewards</td>
+                                <td class="text-right">20%</td>
+                                <td class="text-right">440,000,000</td>
+                                <td>Rewards for Landowners and general $CYBER stakers.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Team</td>
+                                <td class="text-right">15%</td>
+                                <td class="text-right">330,000,000</td>
+                                <td>1-year cliff, then 4-year linear vesting to align the team with long-term success.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Ecosystem & Dev Fund</td>
+                                <td class="text-right">13%</td>
+                                <td class="text-right">286,000,000</td>
+                                <td>Funds community grants, partnerships, and developer tools via the DAO.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Initial Liquidity & Public Sale</td>
+                                <td class="text-right">10%</td>
+                                <td class="text-right">220,000,000</td>
+                                <td>For the public launch (LBP) and initial exchange liquidity. Any tokens not sold will be permanently burned.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Node Operator Rewards</td>
+                                <td class="text-right">10%</td>
+                                <td class="text-right">220,000,000</td>
+                                <td>The sole income source for our vital node operators.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Airdrops</td>
+                                <td class="text-right">2%</td>
+                                <td class="text-right">44,000,000</td>
+                                <td>Rewards for loyal commanders, distributed based on mini-game performance, whitelisting, and to initial investors.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="border-t border-white/10 mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Alliance Forge. All Rights Reserved.</p>
+            <p class="text-sm mt-1">Immutable Codex & Forgenomics Blueprint - Final Version</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,42 +1,182 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos de Uso - Sanctaris</title>
+    <title>Alliance Forge: Legal & Privacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url('hexagonos-fondo.jpg'); /* Asegura que el fondo sea el correcto */
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Blue-Gray Background */
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: rgba(0, 0, 0, 0.7); /* Efecto de fondo semi-transparente */
-            padding: 20px;
-            border-radius: 10px;
+        .alliance-gold {
+            color: #FFD700;
         }
-        .logo {
-            max-width: 150px;
+        .alliance-accent-blue {
+            color: #3B82F6;
+        }
+        .prose-invert h1, .prose-invert h2, .prose-invert h3 {
+            color: #FFD700; /* Gold headings */
+        }
+        .prose-invert a {
+            color: #3B82F6; /* Blue links */
+            transition: color 0.3s ease;
+        }
+        .prose-invert a:hover {
+            color: #60A5FA;
+        }
+        .prose-invert strong {
+            color: #FBBF24; /* Lighter gold for emphasis */
+        }
+        .prose-invert ul > li::before {
+            background-color: #FFD700;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <img src="logo-sanctaris.png" alt="Logo Sanctaris" class="logo">
-        <h1>Términos de Uso</h1>
-        <p>Bienvenido a Sanctaris. Al utilizar nuestros servicios, aceptas las siguientes condiciones...</p>
-        <h2>1. Condiciones generales</h2>
-        <p>...</p>
-        <h2>2. Política de privacidad</h2>
-        <p>...</p>
-        <h2>3. Responsabilidad</h2>
-        <p>...</p>
+<body class="bg-gray-900 text-gray-300">
+
+    <div class="container mx-auto max-w-4xl p-4 sm:p-8">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-4xl sm:text-5xl font-bold alliance-gold">Alliance Forge: Legal & Privacy</h1>
+            <p class="text-gray-400 mt-2">Last Updated: June 29, 2025</p>
+        </header>
+
+        <main class="bg-gray-800/50 rounded-lg shadow-2xl p-6 sm:p-10 prose prose-invert max-w-none">
+            <p class="text-lg text-center mb-8">Welcome to Alliance Forge. Our Terms of Use and Privacy Policy are important documents that affect your rights. We encourage you to read them carefully.</p>
+
+            <!-- Terms of Use Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold border-b-2 border-yellow-500 pb-2 mb-6">Terms of Use</h2>
+                <p class="italic text-gray-400 mb-6"><strong>Disclaimer:</strong> This is a preliminary draft of the Terms of Use for Alliance Forge. This document is a work in progress and is subject to change. The first official and binding version will be released upon the game's official launch.</p>
+                <p>By accessing or using our game, Alliance Forge, our website The Nexus (DACI), or any related services (collectively, the "Services"), you agree to be bound by these Terms and our Privacy Policy. If you do not agree, you may not use our Services.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">1. Eligibility and Account Security</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>To use our Services, you must be at least 18 years old or the age of legal majority in your jurisdiction.</li>
+                    <li>By creating an account, you confirm that you meet this age requirement.</li>
+                    <li>You are responsible for all activities that happen under your account and for keeping your login information confidential.</li>
+                    <li>Sanctaris Games is not liable for any loss that results from the unauthorized use of your account.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">2. Intellectual Property</h3>
+                <p>All parts of the Services, including the game, website, software, text, graphics, logos, and all in-game assets are the property of Sanctaris Games or our licensors. They are protected by copyright, trademark, and other intellectual property laws.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">3. The "Play-and-Own" (P&O) Economy</h3>
+                 <ul class="list-disc pl-5 space-y-2">
+                    <li>Alliance Forge uses a "Play-and-Own" model where certain in-game items are non-fungible tokens (NFTs) that you can truly own.</li>
+                    <li>Your ownership of these NFTs is recorded on the Cronos blockchain.</li>
+                    <li>The value of NFTs and cryptocurrencies can be volatile. We do not guarantee that any asset you own will have any particular value.</li>
+                </ul>
+                
+                <h3 class="text-2xl font-semibold mt-6 mb-4">4. In-Game Assets & Currencies</h3>
+                 <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Auron:</strong> A traditional, off-chain in-game currency earned through gameplay. Auron cannot be traded or converted to on-chain assets.</li>
+                    <li><strong>$ALLIANCE:</strong> An on-chain, soulbound (non-transferable) token earned by wallet-connected players. Its only purpose is to be vested for $CYBER.</li>
+                    <li><strong>$CYBER:</strong> A fixed-supply, ERC-20 governance and value-accrual token. All high-value assets are traded in $CYBER.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">5. Prohibited Conduct</h3>
+                <p>You agree not to engage in any of the following:</p>
+                <ul class="list-disc pl-5 space-y-2 mt-2">
+                    <li>Use our Services for any illegal purpose.</li>
+                    <li>Engage in cheating, hacking, or exploiting bugs for an unfair advantage.</li>
+                    <li>Harass, threaten, or harm other players.</li>
+                    <li>Attempt to disrupt the security or integrity of our Services.</li>
+                    <li>Buy, sell, or trade accounts.</li>
+                    <li>Use any unauthorized third-party software to interact with the Services.</li>
+                </ul>
+                <p class="mt-2">Violation of these rules may result in the suspension or termination of your account.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">6. Disclaimers and Limitation of Liability</h3>
+                <p class="uppercase">THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE.</p>
+                <p class="uppercase mt-2">TO THE FULLEST EXTENT PERMITTED BY LAW, SANCTARIS GAMES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">7. Assumption of Risk</h3>
+                <p>You understand and agree that there are risks associated with using an internet-based service involving blockchain technology. These include risks of hardware or software failure, malicious software, and the risk that third parties may gain unauthorized access to your wallet. You accept that Sanctaris Games will not be responsible for any communication failures, disruptions, or delays you may experience when using the Cronos network.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">8. Termination</h3>
+                <p>We may terminate or suspend your access to our Services at any time, without prior notice or liability, for any reason, including if you breach these Terms.</p>
+                
+                <h3 class="text-2xl font-semibold mt-6 mb-4">9. Governing Law and Disputes</h3>
+                <p>These Terms are governed by the laws of the jurisdiction in which Sanctaris Games is registered. Any dispute arising from these Terms or the Services shall be resolved through binding arbitration.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">10. Changes to These Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. We will notify you of material changes by posting the updated Terms on our website and in-game. Your continued use of the Services after such changes constitutes your acceptance of the new Terms.</p>
+            </section>
+
+            <!-- Privacy Policy Section -->
+            <section>
+                <h2 class="text-3xl font-bold border-b-2 border-yellow-500 pb-2 mb-6">Privacy Policy</h2>
+                <p>This Privacy Policy explains how Sanctaris Games ("we," "us," or "our") collects, uses, and protects your information when you use our Services. We are dedicated to safeguarding your privacy.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">1. Information We Collect</h3>
+                 <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Account and Profile Information:</strong> We collect your username, email address, password, and public wallet address.</li>
+                    <li><strong>Gameplay and Activity Data:</strong> This includes your in-game progress, achievements, rewards, session activity, and your inventory of in-game assets, including NFTs.</li>
+                    <li><strong>Technical and Device Information:</strong> We collect your IP address, device type, operating system, and browser type.</li>
+                    <li><strong>Transaction and Blockchain Data:</strong> We collect transaction IDs and publicly available blockchain data associated with your wallet address.</li>
+                    <li><strong>Information We Do Not Collect:</strong> We do not request or store sensitive personal information like government-issued IDs or credit card details.</li>
+                </ul>
+                
+                <h3 class="text-2xl font-semibold mt-6 mb-4">2. How We Use Your Information</h3>
+                 <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>To Provide the Services:</strong> To create and maintain your account, operate the gameplay experience, and process your transactions.</li>
+                    <li><strong>For Communication:</strong> To send you important updates, security alerts, and administrative messages.</li>
+                    <li><strong>For Security:</strong> To protect the security and integrity of our Services and community.</li>
+                    <li><strong>For Analytics:</strong> To understand player behavior and preferences to enhance our Services.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">3. Information Sharing and Disclosure</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>We do not sell your personal data.</li>
+                    <li>Your public wallet address and transaction data are publicly visible on the blockchain (e.g., Cronos) by nature.</li>
+                    <li>We may share your information with third-party service providers (e.g., for cloud hosting or analytics), who are authorized to use your information only as necessary to provide services to us.</li>
+                    <li>We may disclose information if we believe it's necessary to comply with a law, regulation, or legal request, or to protect our rights or property.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">4. Your Rights and Choices (GDPR & CCPA)</h3>
+                <p>Depending on your location, you have certain rights regarding your personal information, including:</p>
+                <div class="mt-4 space-y-3">
+                    <div class="flex items-start">
+                        <span class="alliance-gold font-bold mr-2 text-lg">→</span>
+                        <p><strong>The right to Access</strong> a copy of your personal data.</p>
+                    </div>
+                     <div class="flex items-start">
+                        <span class="alliance-gold font-bold mr-2 text-lg">→</span>
+                        <p><strong>The right to Rectification</strong> to correct inaccurate data.</p>
+                    </div>
+                     <div class="flex items-start">
+                        <span class="alliance-gold font-bold mr-2 text-lg">→</span>
+                        <p><strong>The right to Erasure (Right to be Forgotten)</strong> to request we delete your personal data. Please note that data stored on the blockchain is immutable and cannot be deleted.</p>
+                    </div>
+                </div>
+                <p class="mt-4">To exercise any of these rights, please contact us at <a href="mailto:allianceforge22@gmail.com" class="alliance-accent-blue hover:underline">allianceforge22@gmail.com</a>.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">5. Children's Privacy</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Alliance Forge is not intended for individuals under the age of 18 (or the relevant age of majority).</li>
+                    <li>We do not knowingly collect personal information from children.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4">6. Changes to This Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website and in-game.</p>
+            </section>
+        </main>
+
+        <footer class="text-center mt-8">
+            <h3 class="text-2xl font-semibold alliance-gold">7. Contact Us</h3>
+            <p class="mt-2">If you have any questions about these Terms or our Privacy Policy, please contact us at:</p>
+            <a href="mailto:allianceforge22@gmail.com" class="text-lg alliance-accent-blue hover:underline font-semibold mt-1 inline-block">allianceforge22@gmail.com</a>
+        </footer>
+        
     </div>
+
 </body>
 </html>
+
 
